@@ -11,4 +11,12 @@ Cypress.Commands.add('login', function(user = Cypress.env('user_name'), password
         login()
     })
 
+
+
+Cypress.Commands.add('logout', function(){
+    cy.get('.qa-user-avatar').click()
+    cy.contains('Sign out').click()
+})
+
+
     
